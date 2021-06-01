@@ -22,6 +22,7 @@
     </header>
     <nav class="menu">
         <div class="menu__elementos">
+
         <div class="menu__items">
             <ul class="lista">
                 <li class="lista__item">Inicio</li>
@@ -33,16 +34,24 @@
                 <li class="lista__item">Contacto</li>
             </ul>
         </div>
+
+
         <div class="menu__buscador">
+
         <input type="text" placeholder="Buscar" class="menu__buscador--search"> 
         <span class="iconify" data-icon="feather:search" id="buscador"  ></span>
         </input>
-        <div class="btn">
-         </div>
+        
     </div>
     </div>
     </nav>
     <main>
+        <div class="chat">
+        <input type="button" value="Chatea con nosotros" class="btnChat">
+        <span id="whatsapp" class="iconify" data-icon="logos:whatsapp" data-inline="false"></span>
+
+    </div>
+
         <div id="mainCarrusel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#mainCarrusel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -53,28 +62,28 @@
 
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="img/lote.png" class="d-block w-100" alt="Lote">
+                <img src="img/lote.jpg" class="d-block w-100" alt="Lote">
                 <div class="carousel-caption d-none d-md-block">
-                  <h5>Lote</h5>
+                  <h5 class="caption">Lotes</h5>
                 </div>
               </div>
               <div class="carousel-item">
-                <img src="img/casa.png" class="d-block w-100" alt="Casa">
+                <img src="img/casa.jpg" class="d-block w-100" alt="Casa">
                 <div class="carousel-caption d-none d-md-block">
-                  <h5>Casa</h5>
+                  <h5 class="caption">Casas</h5>
                 </div>
               </div>
               <div class="carousel-item">
-                <img src="img/complejo.png" class="d-block w-100" alt="Complejo">
+                <img src="img/complejo.jpg" class="d-block w-100" alt="Complejo">
                 <div class="carousel-caption d-none d-md-block">
-                  <h5>Complejo</h5>
+                  <h5 class="caption">Complejos</h5>
                 </div>
                 
               </div>
               <div class="carousel-item">
-                <img src="img/depto.png" class="d-block w-100" alt="Departamento">
+                <img src="img/depto.jpg" class="d-block w-100" alt="Departamento">
                 <div class="carousel-caption d-none d-md-block">
-                  <h5>Departamento</h5>
+                  <h5 class="caption">Departamentos</h5>
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#mainCarrusel" data-bs-slide="prev">
