@@ -1,7 +1,8 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-family: "Nunito Sans", sans-serif; }
 
 header {
   width: 100%;
@@ -80,3 +81,158 @@ header {
       border-radius: 50%;
       padding: 10px;
       cursor: pointer; }
+
+main #mainCarrusel {
+  margin: 0;
+  width: 100%;
+  height: auto;
+  overflow: hidden; }
+  main #mainCarrusel .d-block {
+    width: 100%;
+    height: auto; }
+
+main .bienvenida {
+  width: 100%;
+  height: 806px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; }
+  main .bienvenida__titulo {
+    width: 45%;
+    height: 100px;
+    background-color: #0f4e72;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.8;
+    position: absolute;
+    bottom: 50px;
+    top: 90px;
+    left: 0;
+    z-index: 1000; }
+    main .bienvenida__titulo h1 {
+      color: #fff;
+      font-weight: 600;
+      opacity: 1; }
+  main .bienvenida__texto {
+    margin-top: 70px;
+    width: 60%;
+    height: 600px;
+    background-color: grey;
+    position: relative;
+    right: 20;
+    justify-self: flex-end;
+    display: flex; }
+    main .bienvenida__texto p {
+      font-weight: 600;
+      font-size: 20px;
+      padding: 60px;
+      padding-top: 100px; }
+
+main .destacados {
+  width: 100%;
+  height: 806px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center; }
+  main .destacados__titulo {
+    width: 45%;
+    height: 100px;
+    background-color: #0f4e72;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.8;
+    position: relative;
+    top: 10px;
+    align-self: flex-start; }
+    main .destacados__titulo h2 {
+      color: #fff;
+      font-weight: 600;
+      opacity: 1; }
+  main .destacados__contenido {
+    width: 70%;
+    height: 90%;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 50% 50%;
+    justify-items: center;
+    align-items: center; }
+    main .destacados__contenido .cards {
+      margin: 0 20px 0 20px;
+      border: 1px solid #177ab3;
+      border-radius: 5px;
+      width: 300px;
+      height: 300px;
+      display: flex;
+      align-items: flex-end;
+      position: relative;
+      overflow: hidden; }
+      main .destacados__contenido .cards:hover > .cards__contenido {
+        visibility: visible; }
+      main .destacados__contenido .cards__contenido {
+        width: 100%;
+        height: 35%;
+        background-color: #fff;
+        padding: 7px;
+        z-index: 1000;
+        position: absolute;
+        opacity: 0.9;
+        visibility: hidden; }
+        main .destacados__contenido .cards__contenido p {
+          font-size: 15px;
+          font-weight: 300; }
+        main .destacados__contenido .cards__contenido .btn {
+          position: absolute;
+          bottom: 7px;
+          right: 7px;
+          border-radius: 5px;
+          border: 1px solid #177ab3;
+          color: #177ab3;
+          font-size: 15px; }
+        main .destacados__contenido .cards__contenido img {
+          z-index: 0; }
+
+footer {
+  width: 100%;
+  height: 400px;
+  background-color: #0f4e72;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: 80% 20%;
+  grid-template-areas: "banner  columna1 columna2" "derechos derechos derechos";
+  justify-items: center;
+  align-items: center; }
+  footer .contacto {
+    grid-area: banner;
+    display: flex;
+    flex-flow: column;
+    row-gap: 50px; }
+    footer .contacto__banner {
+      width: 20%;
+      height: 15%;
+      border: none; }
+    footer .contacto__redes {
+      width: 100%;
+      height: 20%;
+      display: flex;
+      justify-content: center;
+      column-gap: 20px;
+      align-items: center; }
+      footer .contacto__redes #redes {
+        width: 35px;
+        height: 35px;
+        color: #fff; }
+  footer .columna1 {
+    grid-area: columna1;
+    padding: 50px;
+    color: #fff; }
+  footer .columna2 {
+    grid-area: columna2;
+    padding: 50px;
+    color: #fff; }
+  footer .derechos {
+    grid-area: derechos;
+    color: #fff; }

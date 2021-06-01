@@ -5,6 +5,7 @@ $azulClaro: #177ab3;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: $nunitoSans;
 }
 
 header {
@@ -110,5 +111,216 @@ header {
       padding: 10px;
       cursor: pointer;
     }
+  }
+}
+
+main {
+  #mainCarrusel {
+    margin: 0;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+
+    .d-block {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .bienvenida {
+    width: 100%;
+    height: 806px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    &__titulo {
+      width: 45%;
+      height: 100px;
+      background-color: $azulOscuro;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0.8;
+      position: absolute;
+      bottom: 50px;
+      top: 90px;
+      left: 0;
+      z-index: 1000;
+      h1 {
+        color: #fff;
+        font-weight: 600;
+        opacity: 1;
+      }
+    }
+
+    &__texto {
+      margin-top: 70px;
+      width: 60%;
+      height: 600px;
+      background-color: grey;
+      position: relative;
+      right: 20;
+      justify-self: flex-end;
+      display: flex;
+
+      p {
+        font-weight: 600;
+        font-size: 20px;
+        padding: 60px;
+        padding-top: 100px;
+      }
+    }
+  }
+
+  .destacados {
+    width: 100%;
+    height: 806px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    &__titulo {
+      width: 45%;
+      height: 100px;
+      background-color: $azulOscuro;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0.8;
+      position: relative;
+      top: 10px;
+      align-self: flex-start;
+
+      h2 {
+        color: #fff;
+        font-weight: 600;
+        opacity: 1;
+      }
+    }
+
+    &__contenido {
+      width: 70%;
+      height: 90%;
+      display: grid;
+      grid-template-columns: 33% 33% 33%;
+      grid-template-rows: 50% 50%;
+      justify-items: center;
+      align-items: center;
+
+      .cards {
+        margin: 0 20px 0 20px;
+        border: 1px solid $azulClaro;
+        border-radius: 5px;
+        width: 300px;
+        height: 300px;
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+
+        &:hover > .cards__contenido {
+          visibility: visible;
+        }
+
+        &__contenido {
+          width: 100%;
+          height: 35%;
+          background-color: #fff;
+          padding: 7px;
+          z-index: 1000;
+          position: absolute;
+          opacity: 0.9;
+          visibility: hidden;
+
+          p {
+            font-size: 15px;
+            font-weight: 300;
+          }
+
+          .btn {
+            position: absolute;
+            bottom: 7px;
+            right: 7px;
+            border-radius: 5px;
+            border: 1px solid $azulClaro;
+            color: $azulClaro;
+            font-size: 15px;
+          }
+
+          img {
+            z-index: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin textoPie {
+  color: #fff;
+}
+footer {
+  width: 100%;
+  height: 400px;
+  background-color: $azulOscuro;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: 80% 20%;
+  grid-template-areas:
+    "banner  columna1 columna2"
+    "derechos derechos derechos";
+
+  justify-items: center;
+  align-items: center;
+
+  .contacto {
+    grid-area: banner;
+    display: flex;
+    flex-flow: column;
+    row-gap: 50px;
+
+    &__banner {
+      width: 20%;
+      height: 15%;
+      border: none;
+    }
+
+    &__redes {
+      width: 100%;
+      height: 20%;
+      display: flex;
+      justify-content: center;
+      column-gap: 20px;
+      align-items: center;
+
+      #redes {
+        width: 35px;
+        height: 35px;
+        color: #fff;
+      }
+    }
+  }
+
+  @mixin columnas {
+    padding: 50px;
+    color: #fff;
+  }
+
+  .columna1 {
+    grid-area: columna1;
+    @include columnas;
+  }
+
+  .columna2 {
+    grid-area: columna2;
+    @include columnas;
+  }
+
+  .derechos {
+    grid-area: derechos;
+    color: #fff;
   }
 }
