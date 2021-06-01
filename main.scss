@@ -153,6 +153,11 @@ main {
         font-size: 40px;
       }
     }
+
+    .carousel-inner {
+      height: 685px;
+      overflow: hidden;
+    }
   }
 
   .bienvenida {
@@ -250,7 +255,7 @@ main {
         overflow: hidden;
 
         &:hover > .cards__contenido {
-          visibility: visible;
+          opacity: 0.9;
         }
 
         &__contenido {
@@ -260,8 +265,8 @@ main {
           padding: 7px;
           z-index: 1000;
           position: absolute;
-          opacity: 0.9;
-          visibility: hidden;
+          opacity: 0;
+          transition: opacity 0.7s ease;
 
           p {
             font-size: 15px;

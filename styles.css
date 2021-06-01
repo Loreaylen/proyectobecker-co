@@ -115,6 +115,9 @@ main #mainCarrusel {
     font-weight: 600; }
     main #mainCarrusel .carousel-caption .caption {
       font-size: 40px; }
+  main #mainCarrusel .carousel-inner {
+    height: 685px;
+    overflow: hidden; }
 
 main .bienvenida {
   width: 100%;
@@ -196,7 +199,7 @@ main .destacados {
       position: relative;
       overflow: hidden; }
       main .destacados__contenido .cards:hover > .cards__contenido {
-        visibility: visible; }
+        opacity: 0.9; }
       main .destacados__contenido .cards__contenido {
         width: 100%;
         height: 35%;
@@ -204,8 +207,8 @@ main .destacados {
         padding: 7px;
         z-index: 1000;
         position: absolute;
-        opacity: 0.9;
-        visibility: hidden; }
+        opacity: 0;
+        transition: opacity 0.7s ease; }
         main .destacados__contenido .cards__contenido p {
           font-size: 15px;
           font-weight: 300; }
