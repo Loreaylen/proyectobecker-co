@@ -90,7 +90,7 @@ main .btnChat {
   bottom: 28px;
   right: 40px;
   border: 1px solid white;
-  background-color: #0f4e72;
+  background-color: #177ab3;
   outline: none;
   border-radius: 15px;
   color: white;
@@ -101,7 +101,8 @@ main #whatsapp {
   width: 50px;
   position: fixed;
   bottom: 20px;
-  right: 20px; }
+  right: 20px;
+  cursor: pointer; }
 
 main #mainCarrusel {
   margin: 0;
@@ -112,6 +113,8 @@ main #mainCarrusel {
     position: absolute;
     top: 250px;
     font-weight: 600; }
+    main #mainCarrusel .carousel-caption .caption {
+      font-size: 40px; }
 
 main .bienvenida {
   width: 100%;
@@ -226,8 +229,9 @@ footer {
   grid-template-rows: 80% 20%;
   grid-template-areas: "banner  columna1 columna2" "derechos derechos derechos";
   justify-items: center;
-  align-items: center; }
+  align-items: start; }
   footer .contacto {
+    padding-top: 40px;
     grid-area: banner;
     display: flex;
     flex-flow: column;
@@ -248,13 +252,29 @@ footer {
         height: 35px;
         color: #fff; }
   footer .columna1 {
+    padding-top: 40px;
     grid-area: columna1;
-    padding: 50px;
-    color: #fff; }
+    color: #fff;
+    font-weight: 600;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: flex-start; }
+    footer .columna1 h4 {
+      font-weight: 600;
+      font-size: 22px;
+      padding-left: 40px; }
+    footer .columna1 .menuFooter {
+      list-style-type: none;
+      font-weight: 600; }
   footer .columna2 {
+    padding-top: 40px;
     grid-area: columna2;
-    padding: 50px;
-    color: #fff; }
+    color: #fff;
+    font-weight: 600; }
+    footer .columna2 h4 {
+      font-size: 22px;
+      font-weight: 600; }
   footer .derechos {
     grid-area: derechos;
     color: #fff; }
